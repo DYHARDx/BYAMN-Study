@@ -1,0 +1,297 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 12 Study Material</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        header {
+            background: linear-gradient(45deg, #7b2ff7, #00c6ff); /* Vibrant Gradient */
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .apk-card {
+            background: #ff8c00;
+            padding: 1rem 2rem;
+            border-radius: 7px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 0.7rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .apk-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3);
+        }
+
+        .content {
+            padding: 3rem 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .subject {
+            background: #5e2f91;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .subject h2 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .subject p {
+            color: #e0e0e0;
+            font-size: 1.1rem;
+        }
+
+        .subject:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            background-color: #9b59b6;
+        }
+
+        .chapter-list-container {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 15px;
+    background: #34495e;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 400px; /* Adjust max height as needed */
+    transition: max-height 0.4s ease-in-out;
+}
+
+
+        .chapter {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: #ffffff; /* White color for text */
+            padding: 1rem;
+            background: #2c3e50;
+            border-radius: 10px;
+            transition: background 0.3s ease-in-out;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chapter:hover {
+            background: #16a085;
+        }
+
+        .chapter a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .chapter input[type="checkbox"] {
+            margin-left: auto;
+        }
+
+        footer {
+            background: #1f1f1f;
+            color: #ffffff;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .content {
+                padding: 2rem 0;
+            }
+
+            .subject h2 {
+                font-size: 1.3rem;
+            }
+
+            .subject p {
+                font-size: 1rem;
+            }
+
+            .subject {
+                padding: 1.5rem;
+            }
+
+            .chapter-list-container {
+                padding: 1rem;
+            }
+
+            .chapter {
+                font-size: 1.1rem;
+            }
+
+            .chapter input[type="checkbox"] {
+                margin-left: 10px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            .content {
+                padding: 1.5rem 0;
+                grid-template-columns: 1fr;
+            }
+
+            .subject h2 {
+                font-size: 1.2rem;
+            }
+
+            .subject p {
+                font-size: 0.9rem;
+            }
+
+            .subject {
+                padding: 1rem;
+            }
+
+            .chapter-list-container {
+                padding: 0.8rem;
+            }
+
+            .chapter {
+                font-size: 1rem;
+            }
+
+            .chapter input[type="checkbox"] {
+                margin-left: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BYAMN Study</h1>
+        <div class="apk-card">
+            <a href="your-apk-download-link" target="_blank" style="color: white; text-decoration: none;">APK Download</a>
+        </div>
+    </header>
+
+    <div class="content">
+       <div class="subject" data-chapters="Chapter 1: कविता का उद्देश्य,Chapter 2: आत्मकथ्य,Chapter 3: जोश की लहर,Chapter 4: महात्मा गांधी और उनका जीवन,Chapter 5: शिक्षक और विद्यार्थी,Chapter 6: संसार के महान नेता,Chapter 7: सामाजिक कर्तव्यों का महत्व,Chapter 8: भारत में लोकतंत्र,Chapter 9: महानता की परिभाषा,Chapter 10: आत्मविश्वास और संघर्ष,Chapter 11: समाज और संस्कृति का प्रभाव,Chapter 12: भारतीय दर्शन,Chapter 13: संचार के माध्यम">
+            <h2>Hindi Notes</h2>
+            <p>Click to view chapters and resources.</p>
+        </div>
+    <div class="subject" data-chapters="Chapter 1: The Last Lesson (Prose),Chapter 2: Lost Spring (Prose),Chapter 3: Deep Water (Prose),Chapter 4: The Rattrap (Prose),Chapter 5: Indigo (Prose),Chapter 6: Poets and Pancakes (Prose),Chapter 7: The Interview (Prose),Chapter 8: Going Places (Prose),Chapter 9: My Mother at Sixty-Six (Poetry),Chapter 10: An Elementary School Classroom in a Slum (Poetry),Chapter 11: A Photograph (Poetry),Chapter 12: The Voice of the Rain (Poetry),Chapter 13: Childhood (Poetry),Chapter 14: The Third Level (Supplementary Reader),Chapter 15: The Tiger King (Supplementary Reader),Chapter 16: Journey to the End of the Earth (Supplementary Reader),Chapter 17: The Enemy (Supplementary Reader),Chapter 18: Should Wizard Hit Mommy? (Supplementary Reader),Chapter 19: On the Face of It (Supplementary Reader),Chapter 20: Evans Tries an O-Level (Supplementary Reader),Chapter 21: Memories of Childhood (Supplementary Reader)">
+            <h2>English Notes</h2>
+            <p>Click to view chapters and resources.</p>
+        </div>
+        <div class="subject" data-chapters="Chapter 1: Electric Charges and Fields,Chapter 2: Electrostatic Potential and Capacitance,Chapter 3: Current Electricity,Chapter 4: Moving Charges and Magnetism,Chapter 5: Magnetism and Matter,Chapter 6: Electromagnetic Induction,Chapter 7: Alternating Currents,Chapter 8: Electromagnetic Waves,Chapter 9: Ray Optics and Optical Instruments,Chapter 10: Wave Optics,Chapter 11: Dual Nature of Matter and Radiation,Chapter 12: Atoms,Chapter 13: Nuclei,Chapter 14: Semiconductor Electronics: Materials Devices and Applications,Chapter 15: Communication Systems,Chapter 16: Gravitation">
+            <h2>Physics Notes</h2>
+            <p>Click to view chapters and resources.</p>
+        </div>
+        <div class="subject" data-chapters="Chapter 1: Solid State,Chapter 2: Solutions,Chapter 3: Electrochemistry,Chapter 4: Chemical Kinetics,Chapter 5: Surface Chemistry,Chapter 6: General Principles and Processes of Isolation of Elements,Chapter 7: p-Block Elements,Chapter 8: d- and f-Block Elements,Chapter 9: Coordination Compounds,Chapter 10: Haloalkanes and Haloarenes,Chapter 11: Alcohols Phenols and Ethers,Chapter 12: Aldehydes Ketones and Carboxylic Acids,Chapter 13: Organic Compounds Containing Nitrogen,Chapter 14: Biomolecules">
+            <h2>Chemistry Notes</h2>
+            <p>Click to view chapters and resources.</p>
+        </div>
+       <div class="subject" data-chapters="Chapter 1: Relations and Functions,Chapter 2: Inverse Trigonometric Functions,Chapter 3: Matrices,Chapter 4: Determinants,Chapter 5: Continuity and Differentiability,Chapter 6: Applications of Derivatives,Chapter 7: Integrals,Chapter 8: Applications of Integrals,Chapter 9: Differential Equations,Chapter 10: Vector Algebra,Chapter 11: Three-dimensional Geometry,Chapter 12: Linear Programming,Chapter 13: Probability">
+            <h2>Math Notes</h2>
+            <p>Click to view chapters and resources.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Class 12 Study Material. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const subjects = document.querySelectorAll('.subject');
+
+        subjects.forEach(subject => {
+            subject.addEventListener('click', (e) => {
+                // Prevent the click event from affecting the chapter list itself
+                if (e.target.closest('.chapter-list-container')) {
+                    return;
+                }
+
+                const chapterListContainer = subject.querySelector('.chapter-list-container');
+                
+                // If chapter list is already open, hide it
+                if (chapterListContainer && chapterListContainer.style.display !== "none") {
+                    chapterListContainer.style.display = "none";
+                } else {
+                    // Close all other chapter lists
+                    document.querySelectorAll('.chapter-list-container').forEach(container => {
+                        container.style.display = "none";
+                    });
+
+                    // Create the chapter list if not already created
+                    if (!chapterListContainer) {
+                        const chapters = subject.getAttribute('data-chapters').split(',');
+                        const newChapterListContainer = document.createElement('div');
+                        newChapterListContainer.className = 'chapter-list-container';
+                        newChapterListContainer.innerHTML = chapters
+                            .map((chapter, index) => {
+                                const chapterId = `chapter-${index}`;
+                                const youtubeLink = `https://www.youtube.com/results?search_query=${encodeURIComponent(chapter.trim())}`;
+                                return `
+                                    <div class="chapter">
+                                        <a href="${youtubeLink}" target="_blank">${chapter}</a>
+                                        <input type="checkbox" id="${chapterId}" ${localStorage.getItem(chapterId) === 'checked' ? 'checked' : ''} 
+                                        onchange="saveCheckboxState('${chapterId}')">
+                                    </div>
+                                `;
+                            })
+                            .join('');
+                        subject.appendChild(newChapterListContainer);
+                    }
+                    subject.querySelector('.chapter-list-container').style.display = "block";
+                }
+            });
+        });
+
+        function saveCheckboxState(chapterId) {
+            const checkbox = document.getElementById(chapterId);
+            localStorage.setItem(chapterId, checkbox.checked ? 'checked' : '');
+        }
+    </script>
+
+</body>
+</html>
