@@ -127,12 +127,27 @@
         }
 
         footer {
-            background: #1f1f1f;
-            color: #ffffff;
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.7);
+    background: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.6);
+    font-size: 0.9rem;
+}
+footer a {
+    color: #00c6ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+footer img {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
         }
 
         @media screen and (max-width: 768px) {
@@ -210,7 +225,7 @@
     <header>
         <h1>BYAMN Study</h1>
         <div class="apk-card">
-            <a href="your-apk-download-link" target="_blank" style="color: white; text-decoration: none;">APK Download</a>
+            <a href="https://dyhardx.github.io/Epro/" target="_blank" style="color: white; text-decoration: none;">APK Download</a>
         </div>
     </header>
 
@@ -236,10 +251,16 @@
             <p>Click to view chapters and resources.</p>
         </div>
     </div>
-
     <footer>
-        <p>&copy; 2024 Class 12 Study Material. All Rights Reserved.</p>
+        <div class="subscribe-button" style="text-align: center;">
+            <p>Created By Aman Singh</p>
+            <p>Visit 
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo" style="width: 20px; vertical-align: middle;">
+                <a href="https://www.youtube.com/@byamn_app" target="_blank" style="color: #00c6ff; text-decoration: none;"> YouTube</a>.
+            </p>
+        </div>
     </footer>
+    
 
     <script>
         const subjects = document.querySelectorAll('.subject');
