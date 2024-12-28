@@ -29,18 +29,17 @@
             background: #1e1e1e;
             border-radius: 12px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-            transform: perspective(1000px) rotateX(0) rotateY(0);
+            position: relative;
             transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
-            text-decoration: none;
         }
         .card:hover {
-            transform: perspective(1000px) rotateX(-10deg) rotateY(10deg);
+            transform: perspective(1000px) scale(1.05);
             box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
         }
         .day {
             background: #bb86fc;
-            color: #ffffff;
+            color: #121212;
             padding: 12px;
             border-radius: 12px 12px 0 0;
             text-align: center;
@@ -49,7 +48,13 @@
         .subjects {
             padding: 20px;
             text-align: center;
-            color: #ffffff; /* White color for subject name */
+            color: #ffffff;
+        }
+        .checkbox {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
         }
         h1 {
             margin-bottom: 20px;
@@ -69,72 +74,106 @@
     </style>
 </head>
 <body>
-    <h1>Class 12th OneShot</h1>
+    <h1>Class 12th Chemistry</h1>
     <div class="container">
         <!-- Chemistry Timetable Cards -->
-        <a href="https://example.com/chapter1" class="card">
+        <div class="card">
+            <input type="checkbox" class="checkbox" data-chapter="Solid State">
             <div class="day">Chapter 1</div>
-            <div class="subjects">Chemistry: Solid State</div>
-        </a>
-        <a href="https://example.com/chapter2" class="card">
+            <div class="subjects" onclick="redirectToYouTube('Solid State')">Chemistry: Solid State</div>
+        </div>
+        <div class="card">
+            <input type="checkbox" class="checkbox" data-chapter="Solutions">
             <div class="day">Chapter 2</div>
-            <div class="subjects">Chemistry: Solutions</div>
-        </a>
-        <a href="https://example.com/chapter3" class="card">
+            <div class="subjects" onclick="redirectToYouTube('Solutions')">Chemistry: Solutions</div>
+        </div>
+        <div class="card">
+            <input type="checkbox" class="checkbox" data-chapter="Electrochemistry">
             <div class="day">Chapter 3</div>
-            <div class="subjects">Chemistry: Electrochemistry</div>
-        </a>
-        <a href="https://example.com/chapter4" class="card">
+            <div class="subjects" onclick="redirectToYouTube('Electrochemistry')">Chemistry: Electrochemistry</div>
+        </div>
+        <div class="card">
+            <input type="checkbox" class="checkbox" data-chapter="Chemical Kinetics">
             <div class="day">Chapter 4</div>
-            <div class="subjects">Chemistry: Chemical Kinetics</div>
-        </a>
-        <a href="https://example.com/chapter5" class="card">
+            <div class="subjects" onclick="redirectToYouTube('Chemical Kinetics')">Chemistry: Chemical Kinetics</div>
+        </div>
+        <div class="card">
+            <input type="checkbox" class="checkbox" data-chapter="Surface Chemistry">
             <div class="day">Chapter 5</div>
-            <div class="subjects">Chemistry: Surface Chemistry</div>
-        </a>
-        <a href="https://example.com/chapter6" class="card">
+            <div class="subjects" onclick="redirectToYouTube('Surface Chemistry')">Chemistry: Surface Chemistry</div>
+        </div>
+        <div class="card">
+            <input type="checkbox" class="checkbox" data-chapter="General Principles and Processes of Isolation of Elements">
             <div class="day">Chapter 6</div>
-            <div class="subjects">Chemistry: General Principles and Processes of Isolation of Elements</div>
-        </a>
-        <a href="https://example.com/chapter7" class="card">
+            <div class="subjects" onclick="redirectToYouTube('General Principles and Processes of Isolation of Elements')">Chemistry: General Principles and Processes of Isolation of Elements</div>
+        </div>
+        <div class="card">
+            <input type="checkbox" class="checkbox" data-chapter="p-Block Elements">
             <div class="day">Chapter 7</div>
-            <div class="subjects">Chemistry: p-Block Elements</div>
-        </a>
-        <a href="https://example.com/chapter8" class="card">
+            <div class="subjects" onclick="redirectToYouTube('p-Block Elements')">Chemistry: p-Block Elements</div>
+        </div>
+        <div class="card">
+            <input type="checkbox" class="checkbox" data-chapter="d- and f-Block Elements">
             <div class="day">Chapter 8</div>
-            <div class="subjects">Chemistry: d- and f-Block Elements</div>
-        </a>
-        <a href="https://example.com/chapter9" class="card">
+            <div class="subjects" onclick="redirectToYouTube('d- and f-Block Elements')">Chemistry: d- and f-Block Elements</div>
+        </div>
+        <div class="card">
+            <input type="checkbox" class="checkbox" data-chapter="Coordination Compounds">
             <div class="day">Chapter 9</div>
-            <div class="subjects">Chemistry: Coordination Compounds</div>
-        </a>
-        <a href="https://example.com/chapter10" class="card">
+            <div class="subjects" onclick="redirectToYouTube('Coordination Compounds')">Chemistry: Coordination Compounds</div>
+        </div>
+        <div class="card">
+            <input type="checkbox" class="checkbox" data-chapter="Haloalkanes and Haloarenes">
             <div class="day">Chapter 10</div>
-            <div class="subjects">Chemistry: Haloalkanes and Haloarenes</div>
-        </a>
-        <a href="https://example.com/chapter11" class="card">
+            <div class="subjects" onclick="redirectToYouTube('Haloalkanes and Haloarenes')">Chemistry: Haloalkanes and Haloarenes</div>
+        </div>
+        <div class="card">
+            <input type="checkbox" class="checkbox" data-chapter="Alcohols, Phenols, and Ethers">
             <div class="day">Chapter 11</div>
-            <div class="subjects">Chemistry: Alcohols, Phenols, and Ethers</div>
-        </a>
-        <a href="https://example.com/chapter12" class="card">
+            <div class="subjects" onclick="redirectToYouTube('Alcohols, Phenols, and Ethers')">Chemistry: Alcohols, Phenols, and Ethers</div>
+        </div>
+        <div class="card">
+            <input type="checkbox" class="checkbox" data-chapter="Aldehydes, Ketones, and Carboxylic Acids">
             <div class="day">Chapter 12</div>
-            <div class="subjects">Chemistry: Aldehydes, Ketones, and Carboxylic Acids</div>
-        </a>
-        <a href="https://example.com/chapter13" class="card">
+            <div class="subjects" onclick="redirectToYouTube('Aldehydes, Ketones, and Carboxylic Acids')">Chemistry: Aldehydes, Ketones, and Carboxylic Acids</div>
+        </div>
+        <div class="card">
+            <input type="checkbox" class="checkbox" data-chapter="Organic Compounds Containing Nitrogen">
             <div class="day">Chapter 13</div>
-            <div class="subjects">Chemistry: Organic Compounds Containing Nitrogen</div>
-        </a>
-        <a href="https://example.com/chapter14" class="card">
+            <div class="subjects" onclick="redirectToYouTube('Organic Compounds Containing Nitrogen')">Chemistry: Organic Compounds Containing Nitrogen</div>
+        </div>
+        <div class="card">
+            <input type="checkbox" class="checkbox" data-chapter="Biomolecules">
             <div class="day">Chapter 14</div>
-            <div class="subjects">Chemistry: Biomolecules</div>
-        </a>
+            <div class="subjects" onclick="redirectToYouTube('Biomolecules')">Chemistry: Biomolecules</div>
+        </div>
     </div>
 
     <div class="footer">
-        <div class="subscribe-button" style="text-align: center;">
-            <p>Created By Aman Singh</p>
-            <p>Visit   <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo" style="width: 20px;"><a href="https://www.example.com" target="_blank">  YouTube</a>.</p>
-        </div>
+        <p>Created By Aman Singh</p>
+        <p>Visit <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo" style="width: 20px;"><a href="https://www.example.com" target="_blank"> YouTube</a>.</p>
     </div>
+
+    <script>
+        // Save and Load Checkbox State
+        document.addEventListener("DOMContentLoaded", () => {
+            const checkboxes = document.querySelectorAll(".checkbox");
+            checkboxes.forEach(checkbox => {
+                const chapter = checkbox.dataset.chapter;
+                checkbox.checked = localStorage.getItem(chapter) === "true";
+
+                checkbox.addEventListener("change", () => {
+                    localStorage.setItem(chapter, checkbox.checked);
+                });
+            });
+        });
+
+        // Redirect to YouTube with Chapter Name and Class 12
+        function redirectToYouTube(chapter) {
+            const query = encodeURIComponent(`${chapter} Class 12`);
+            const youtubeURL = `https://www.youtube.com/results?search_query=${query}`;
+            window.open(youtubeURL, "_blank");
+        }
+    </script>
 </body>
 </html>
