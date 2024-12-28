@@ -66,64 +66,84 @@
             text-decoration: none;
             font-weight: bold;
         }
+        .checkbox-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>Class 12th OneShot</h1>
     <div class="container">
         <!-- Hindi Timetable Cards -->
-        <a href="https://example.com/chapter1" class="card">
+        <a href="https://example.com/chapter1" class="card" target="_blank">
             <div class="day">Chapter 1</div>
             <div class="subjects">Hindi: कविता का उद्देश्य</div>
         </a>
-        <a href="https://example.com/chapter2" class="card">
+        <a href="https://example.com/chapter2" class="card" target="_blank">
             <div class="day">Chapter 2</div>
             <div class="subjects">Hindi: आत्मकथ्य</div>
         </a>
-        <a href="https://example.com/chapter3" class="card">
+        <a href="https://example.com/chapter3" class="card" target="_blank">
             <div class="day">Chapter 3</div>
             <div class="subjects">Hindi: जोश की लहर</div>
         </a>
-        <a href="https://example.com/chapter4" class="card">
+        <a href="https://example.com/chapter4" class="card" target="_blank">
             <div class="day">Chapter 4</div>
             <div class="subjects">Hindi: महात्मा गांधी और उनका जीवन</div>
         </a>
-        <a href="https://example.com/chapter5" class="card">
+        <a href="https://example.com/chapter5" class="card" target="_blank">
             <div class="day">Chapter 5</div>
             <div class="subjects">Hindi: शिक्षक और विद्यार्थी</div>
         </a>
-        <a href="https://example.com/chapter6" class="card">
+        <a href="https://example.com/chapter6" class="card" target="_blank">
             <div class="day">Chapter 6</div>
             <div class="subjects">Hindi: संसार के महान नेता</div>
         </a>
-        <a href="https://example.com/chapter7" class="card">
+        <a href="https://example.com/chapter7" class="card" target="_blank">
             <div class="day">Chapter 7</div>
             <div class="subjects">Hindi: सामाजिक कर्तव्यों का महत्व</div>
         </a>
-        <a href="https://example.com/chapter8" class="card">
+        <a href="https://example.com/chapter8" class="card" target="_blank">
             <div class="day">Chapter 8</div>
             <div class="subjects">Hindi: भारत में लोकतंत्र</div>
         </a>
-        <a href="https://example.com/chapter9" class="card">
+        <a href="https://example.com/chapter9" class="card" target="_blank">
             <div class="day">Chapter 9</div>
             <div class="subjects">Hindi: महानता की परिभाषा</div>
         </a>
-        <a href="https://example.com/chapter10" class="card">
+        <a href="https://example.com/chapter10" class="card" target="_blank">
             <div class="day">Chapter 10</div>
             <div class="subjects">Hindi: आत्मविश्वास और संघर्ष</div>
         </a>
-        <a href="https://example.com/chapter11" class="card">
+        <a href="https://example.com/chapter11" class="card" target="_blank">
             <div class="day">Chapter 11</div>
             <div class="subjects">Hindi: समाज और संस्कृति का प्रभाव</div>
         </a>
-        <a href="https://example.com/chapter12" class="card">
+        <a href="https://example.com/chapter12" class="card" target="_blank">
             <div class="day">Chapter 12</div>
             <div class="subjects">Hindi: भारतीय दर्शन</div>
         </a>
-        <a href="https://example.com/chapter13" class="card">
+        <a href="https://example.com/chapter13" class="card" target="_blank">
             <div class="day">Chapter 13</div>
             <div class="subjects">Hindi: संचार के माध्यम</div>
         </a>
+    </div>
+
+    <div class="checkbox-container">
+        <label>
+            <input type="checkbox" id="chapter1Checkbox" onclick="saveCheckboxState()"> Chapter 1
+        </label>
+        <label>
+            <input type="checkbox" id="chapter2Checkbox" onclick="saveCheckboxState()"> Chapter 2
+        </label>
+        <label>
+            <input type="checkbox" id="chapter3Checkbox" onclick="saveCheckboxState()"> Chapter 3
+        </label>
+        <!-- Add more checkboxes as needed -->
     </div>
 
     <div class="footer">
@@ -132,5 +152,32 @@
             <p>Visit   <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo" style="width: 20px;"><a href="https://www.example.com" target="_blank">  YouTube</a>.</p>
         </div>
     </div>
+
+    <script>
+        // Save the checkbox state to localStorage
+        function saveCheckboxState() {
+            const chapter1State = document.getElementById("chapter1Checkbox").checked;
+            const chapter2State = document.getElementById("chapter2Checkbox").checked;
+            const chapter3State = document.getElementById("chapter3Checkbox").checked;
+            
+            localStorage.setItem("chapter1", chapter1State);
+            localStorage.setItem("chapter2", chapter2State);
+            localStorage.setItem("chapter3", chapter3State);
+        }
+
+        // Load the checkbox state from localStorage
+        function loadCheckboxState() {
+            const chapter1State = localStorage.getItem("chapter1") === 'true';
+            const chapter2State = localStorage.getItem("chapter2") === 'true';
+            const chapter3State = localStorage.getItem("chapter3") === 'true';
+            
+            document.getElementById("chapter1Checkbox").checked = chapter1State;
+            document.getElementById("chapter2Checkbox").checked = chapter2State;
+            document.getElementById("chapter3Checkbox").checked = chapter3State;
+        }
+
+        // Load the saved state when the page loads
+        window.onload = loadCheckboxState;
+    </script>
 </body>
 </html>
